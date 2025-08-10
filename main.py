@@ -22,6 +22,9 @@ app.add_middleware(
 
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+@app.get("/")
+async def root():
+    return {"message": "FastAPI backend is live on Render!"}
 
 @app.post("/api")
 async def analyze(request: Request):

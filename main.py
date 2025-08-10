@@ -8,6 +8,7 @@ import json
 
 from task_engine import run_python_code
 from gemini import parse_question_with_llm, answer_with_data
+api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 
